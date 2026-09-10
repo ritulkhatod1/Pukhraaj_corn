@@ -3,6 +3,8 @@ export const business = {
   phoneDisplay: "+91 96171 04944",
   altPhone: "+91 99819 25699",
   altPhoneLink: "+919981925699",
+  contactPerson: "Puneet Khatod",
+  contactPersonPhone: "9893727376",
   email: "pukhraajcornproducts@gmail.com",
   whatsapp: "https://wa.me/919617104944",
   address: "Sushil Cotton Processor\nManawar, Dist. Dhar - 454446\nMadhya Pradesh, India",
@@ -26,7 +28,7 @@ export const products: Product[] = [
   {
     slug: "whole-maize",
     name: "Whole Maize",
-    image: "https://images.unsplash.com/photo-1551754655-cd27e38d2076?auto=format&fit=crop&w=1200&q=88",
+    image: "/products/Whole Maize.png",
     short: "Carefully selected and machine-cleaned premium yellow maize, offering consistent quality for food processing and industrial applications.",
     applications: ["Nachos & tortilla chips", "Corn starch", "Liquid glucose", "Sorbitol", "Corn milling", "Maize-based derivatives"],
     specifications: ["Selected yellow maize", "Machine cleaned", "Uniform & mature kernels", "Low foreign matter", "Customized quality parameters available"],
@@ -38,7 +40,7 @@ export const products: Product[] = [
   {
     slug: "broken-maize",
     name: "Broken Maize",
-    image: "/products/broken-maize.png",
+    image: "/products/Broken Maize.png",
     short: "Precisely processed broken maize with uniform granulation, designed for consistent performance across snack, cereal and food-processing applications.",
     applications: ["Extruded snacks", "Corn flakes", "Makka poha", "Breakfast cereals", "Food processing"],
     specifications: ["Available in 2-4 mm & 4-6 mm", "Uniform granulation", "Clean & processed", "Customized sizes available"],
@@ -50,7 +52,7 @@ export const products: Product[] = [
   {
     slug: "corn-grit",
     name: "Corn Grit",
-    image: "/products/corn-grit.jpg",
+    image: "/products/Corn Grit.png",
     short: "High-quality corn grit produced from selected maize, delivering uniform particle size and reliable performance for snack and extrusion industries.",
     applications: ["Extruded snacks", "Puff snacks", "Namkeen", "Snack pellets", "Food processing"],
     specifications: ["Available in 101 & 108 grades", "Uniform particle size", "Consistent quality", "Customized mesh & granulation available"],
@@ -62,7 +64,7 @@ export const products: Product[] = [
   {
     slug: "corn-flour",
     name: "Corn Flour",
-    image: "/products/corn-flour.jpg",
+    image: "/products/Corn Flour.png",
     short: "Finely milled corn flour with a smooth and consistent texture, suitable for a wide range of food-processing applications.",
     applications: ["Bakery products", "Tortillas", "Namkeen", "Food preparations", "Processed food products"],
     specifications: ["Finely milled", "Uniform texture", "Consistent quality", "Customized mesh size available"],
@@ -74,7 +76,7 @@ export const products: Product[] = [
   {
     slug: "cattle-feed",
     name: "Cattle Feed",
-    image: "https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=1200&q=88",
+    image: "/products/Cattle Feed.png",
     short: "Nutritious maize-based cattle feed providing a valuable source of energy to support balanced nutrition and milk production.",
     applications: ["Dairy cattle feed", "Livestock nutrition", "Feed formulation", "Energy-rich feed ingredient"],
     specifications: ["Maize-based feed material", "Good source of energy", "Consistent quality", "Suitable for cattle-feed formulations"],

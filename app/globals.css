@@ -38,6 +38,14 @@ a { color:inherit; text-decoration:none; }
 .timeline-mobile span { display:block; font-size:.85rem; font-weight:800; color:#b1830d; }
 .timeline-mobile strong { margin-top:.35rem; display:block; color:#18382b; }
 .timeline-mobile.is-active { transform:translateX(4px); border-color:#18382b; background:#f4efdf; }
+.timeline-detail-copy { transition:opacity 300ms ease, max-height 300ms ease; }
+.timeline-hover-hint { display:none; }
+@media (min-width: 768px) {
+  .timeline-detail-copy { max-height:0; overflow:hidden; opacity:0; }
+  .timeline-detail:hover .timeline-detail-copy, .timeline-detail:focus-within .timeline-detail-copy { max-height:14rem; opacity:1; }
+  .timeline-detail:hover .timeline-hover-hint, .timeline-detail:focus-within .timeline-hover-hint { display:none; }
+  .timeline-detail:not(:hover) .timeline-hover-hint { display:block; }
+}
 .contact-item { transition:transform 300ms ease; }
 .contact-item:hover { transform:translateY(-2px); }
 input, select, textarea { border-radius:8px; transition:border-color 200ms ease, box-shadow 200ms ease; }
