@@ -42,9 +42,8 @@ a { color:inherit; text-decoration:none; }
 .timeline-hover-hint { display:none; }
 @media (min-width: 768px) {
   .timeline-detail-copy { max-height:0; overflow:hidden; opacity:0; }
-  .timeline-detail:hover .timeline-detail-copy, .timeline-detail:focus-within .timeline-detail-copy { max-height:14rem; opacity:1; }
-  .timeline-detail:hover .timeline-hover-hint, .timeline-detail:focus-within .timeline-hover-hint { display:none; }
-  .timeline-detail:not(:hover) .timeline-hover-hint { display:block; }
+  .timeline-detail.is-revealed .timeline-detail-copy { max-height:14rem; opacity:1; }
+  .timeline-detail.is-revealed .timeline-hover-hint { display:none; }
 }
 .contact-item { transition:transform 300ms ease; }
 .contact-item:hover { transform:translateY(-2px); }

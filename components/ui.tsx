@@ -36,11 +36,16 @@ export function Process({ inverse = false }: { inverse?: boolean }) {
 
 export function Timeline() {
   const [active, setActive] = useState(0);
+  const [hasHoveredYear, setHasHoveredYear] = useState(false);
   const m = milestones[active];
+  function selectMilestone(index: number) {
+    setActive(index);
+    setHasHoveredYear(true);
+  }
   return <div className="mt-10">
-    <div className="hidden md:block"><div className="relative grid grid-cols-7 gap-0"><span className="absolute left-0 right-0 top-[31px] h-px bg-[#d5a51d]/35" /><span className="absolute left-0 top-[31px] h-px bg-[#d5a51d] transition-all duration-500" style={{ width: `${(active / (milestones.length - 1)) * 100}%` }} />{milestones.map((item, i) => <button type="button" aria-pressed={i === active} key={item.year} onClick={() => setActive(i)} className={`timeline-dot relative z-10 text-left ${i === active ? "is-active" : ""}`}><span>{item.year}</span><i /></button>)}</div></div>
-    <div className="grid gap-3 md:hidden">{milestones.map((item, i) => <button type="button" aria-pressed={i === active} key={item.year} onClick={() => setActive(i)} className={`timeline-mobile ${i === active ? "is-active" : ""}`}><span>{item.year}</span><strong>{item.title}</strong></button>)}</div>
-    <article aria-live="polite" className="timeline-detail group mt-8 max-w-3xl bg-white p-7 shadow-sm transition duration-500 sm:p-9 md:mt-10"><p className="text-sm font-extrabold tracking-[.18em] text-[#b1830d]">{m.year}</p><h3 className="display mt-3 text-4xl text-[#18382b]">{m.title}</h3><div className="timeline-detail-copy"><p className="mt-4 text-sm leading-7 text-stone-600">{m.copy}</p><div className="mt-7 inline-flex whitespace-pre-line border-l-4 border-[#d5a51d] bg-[#f4efdf] px-5 py-4 text-sm font-extrabold tracking-wider text-[#18382b]">{m.stat}</div></div><p className="timeline-hover-hint mt-5 text-xs font-bold uppercase tracking-widest text-[#b1830d]">Hover for details</p></article>
+    <div className="hidden md:block"><div className="relative grid grid-cols-7 gap-0"><span className="absolute left-0 right-0 top-[31px] h-px bg-[#d5a51d]/35" /><span className="absolute left-0 top-[31px] h-px bg-[#d5a51d] transition-all duration-500" style={{ width: `${(active / (milestones.length - 1)) * 100}%` }} />{milestones.map((item, i) => <button type="button" aria-pressed={i === active} key={item.year} onMouseEnter={() => selectMilestone(i)} onFocus={() => selectMilestone(i)} onClick={() => selectMilestone(i)} className={`timeline-dot relative z-10 text-left ${i === active ? "is-active" : ""}`}><span>{item.year}</span><i /></button>)}</div></div>
+    <div className="grid gap-3 md:hidden">{milestones.map((item, i) => <button type="button" aria-pressed={i === active} key={item.year} onClick={() => selectMilestone(i)} className={`timeline-mobile ${i === active ? "is-active" : ""}`}><span>{item.year}</span><strong>{item.title}</strong></button>)}</div>
+    <article aria-live="polite" className={`timeline-detail mt-8 max-w-3xl bg-white p-7 shadow-sm transition duration-500 sm:p-9 md:mt-10 ${hasHoveredYear ? "is-revealed" : ""}`}><p className="text-sm font-extrabold tracking-[.18em] text-[#b1830d]">{m.year}</p><h3 className="display mt-3 text-4xl text-[#18382b]">{m.title}</h3><div className="timeline-detail-copy"><p className="mt-4 text-sm leading-7 text-stone-600">{m.copy}</p><div className="mt-7 inline-flex whitespace-pre-line border-l-4 border-[#d5a51d] bg-[#f4efdf] px-5 py-4 text-sm font-extrabold tracking-wider text-[#18382b]">{m.stat}</div></div><p className="timeline-hover-hint mt-5 text-xs font-bold uppercase tracking-widest text-[#b1830d]">Hover over a year to view details</p></article>
   </div>;
 }
 
