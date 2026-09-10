@@ -27,7 +27,7 @@ export default function Footer() {
         <p className="mb-3 flex gap-2 whitespace-pre-line text-sm leading-5 text-[#dfe8da]"><MapPin size={15} className="mt-1 shrink-0 text-[#d5a51d]" />{business.address}</p>
         <a href={`tel:${business.phone}`} className="mb-2 flex gap-2 text-sm hover:text-[#d5a51d]"><Phone size={15} />{business.phoneDisplay}</a>
         <a href={`tel:${business.altPhoneLink}`} className="mb-2 flex gap-2 text-sm hover:text-[#d5a51d]"><Phone size={15} />{business.altPhone}</a>
-        <a href={`tel:${business.contactPersonPhone}`} className="mb-2 flex gap-2 text-sm hover:text-[#d5a51d]"><Phone size={15} />{business.contactPerson} - {business.contactPersonPhone}</a>
+        <a href={`tel:${business.contactPersonPhone}`} className="mb-2 flex gap-2 text-sm hover:text-[#d5a51d]"><Phone size={15} />{business.contactPersonPhone}</a>
         <a href={`mailto:${business.email}`} className="mb-3 flex gap-2 text-sm hover:text-[#d5a51d]"><Mail size={15} />{business.email}</a>
         <p className="flex gap-2 whitespace-pre-line text-sm leading-5 text-[#dfe8da]"><Clock size={15} className="mt-1 shrink-0 text-[#d5a51d]" />{business.hours}</p>
       </div>

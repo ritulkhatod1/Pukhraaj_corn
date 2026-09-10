@@ -3,7 +3,6 @@ export const business = {
   phoneDisplay: "+91 96171 04944",
   altPhone: "+91 99819 25699",
   altPhoneLink: "+919981925699",
-  contactPerson: "Puneet Khatod",
   contactPersonPhone: "9893727376",
   email: "pukhraajcornproducts@gmail.com",
   whatsapp: "https://wa.me/919617104944",
